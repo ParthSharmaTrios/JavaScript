@@ -1,0 +1,66 @@
+<!Doctype html>
+
+<html lang="en">
+
+
+<head>
+	<title> Learning JavaScript</title>
+
+	<script>
+	
+	
+	var Name= "John";
+	var firstNumber = 10;
+	var secondNumber = 30;
+	
+		function sum(){
+		
+			//console.log(firstNumber+secondNumber);	
+			
+			document.getElementById("result").innerHTML= firstNumber+secondNumber;
+			
+		
+		}
+		
+		function welcome(){
+			alert("this is welcome message");
+		}
+		
+		function changeText(){
+			document.getElementById("message").innerHTML="<img src='https://www.intenziv.com/uploads/2013/12/some_any_no_pic_blog.jpg'>";
+			
+			document.getElementById("txtBox").value = "this is sometext";
+			
+		}
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+
+
+	<h1 id="result">Result </h1>
+	
+	
+	<h1 onclick="sum()"> click me for sum for 10 and 30  </h1>
+	<h1 onclick="welcome()"> click me for welcome message  </h1>
+	
+	
+	<span id="message" onclick="changeText()">Click me </span>
+	
+	<form>
+		<input type="text" id="txtBox" onblur="changeText()" placeholder="Enter something here">
+	
+	</form>
+	
+	
+	
+	
+
+</body>
+
+</html>
