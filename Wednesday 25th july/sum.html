@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+	<script>
+	
+	
+	    
+		//var FirstNumber = prompt("Enter first Number:");
+		//var SecondNumber = prompt("Enter Second Number:");
+		
+		//var result = parseInt(FirstNumber) + parseInt(SecondNumber);
+		
+		
+		//alert(result);
+		
+		function add(){
+		
+			var firstNumber = document.getElementById("firstNumber").value;
+			var secondNumber = document.getElementById("SecondNumber").value;
+			
+			document.getElementById("result").innerHTML= parseInt(firstNumber)+parseInt(secondNumber);
+			//alert(parseInt(firstNumber)+parseInt(secondNumber));
+		}
+		
+		function multi(){
+		
+			var firstNumber = document.getElementById("firstNumber").value;
+			var secondNumber = document.getElementById("SecondNumber").value;
+			
+			document.getElementById("result").innerHTML= parseInt(firstNumber)*parseInt(secondNumber);
+			//alert(parseInt(firstNumber)+parseInt(secondNumber));
+		}
+	
+	
+	</script>
+
+</head>
+
+
+<body>
+
+	<input type="text" id="firstNumber" placeholder="Firt Number"><br><br>
+	<input type="text" id="SecondNumber" placeholder="Second Number"><br><br>
+	<button onclick="add()"> Add</button> <br><br>
+	<button onclick="multi()"> Multiply </button>
+	
+	
+	<h1 id="result"></h1>
+
+</body>
+
+
+</html>
