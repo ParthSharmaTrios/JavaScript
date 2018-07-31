@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title>Question3 </title>
+
+	<script>
+		var qnty = parseInt(prompt("Enter quantity"));
+		
+		var cost = qnty *100;
+		var totalPrice = 0;
+		
+		if(cost > 1000){
+		
+			totalPrice = cost - ((cost * 10)/100);
+			alert("Total Price with 10% discount : " + totalPrice);
+		}
+		else{
+			totalPrice=cost;
+			alert("Total Price is :" + totalPrice);
+		}
+	
+	</script>
+	
+</head>
+
+
+<body>
+
+	
+	
+
+</body>
+
+
+</html>
