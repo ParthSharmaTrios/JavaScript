@@ -1,0 +1,45 @@
+<hmtl>
+
+<head>
+	<title>No. of Vowels and consonants  </title>
+	
+	<script>
+	
+		var input = prompt("Enter any string");
+		
+		var vowels = 0;
+		var consonants = 0;
+		
+			
+			for(var i =input.length-1 ; i >= 0 ; i--){
+			
+			
+				if(input.charAt(i)=="a" || input.charAt(i)=="e" || input.charAt(i)=="i" || input.charAt(i)=="o" || input.charAt(i)=="u" ){
+				
+					vowels++;
+				}
+				else{
+					consonants++;
+				}
+			
+			
+			}
+			
+			
+			
+			alert("No. of Vowels=" + vowels + " and no. of Consonants = " + consonants);
+		
+		
+		
+	
+	
+	</script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
