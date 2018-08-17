@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>form </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script>
+
+
+
+
+        function check(string){
+
+            string=string.toLowerCase();
+
+          let counter = 0;
+
+          for(var i=0; i < string.length ; i++){
+
+              if(string.charAt(i)=="a" ||
+                  string.charAt(i)=="e" ||
+                  string.charAt(i)=="i" || string.charAt(i)=="o" || string.charAt(i)=="u"){
+
+                  counter++;
+
+              }
+
+          }
+
+          return counter;
+
+
+        }
+
+
+        var result = check("Anthony");
+      //  alert(result);
+
+    //  alert( parseInt("a"));
+
+        function numbers(string){
+
+            let characters = 0;
+            let numbers = 0;
+
+
+            for(var i=0; i < string.length ; i++){
+
+
+               let check = parseInt(string.charAt(i));
+
+               if(isNaN(check))
+                   characters++;
+                else
+                    numbers++;
+
+
+
+
+            }
+
+            alert("No. of character = " + characters + " and number = " + numbers);
+
+
+        }
+
+
+        //numbers("John1234");
+
+
+        alert(findMax(1,2,3,500,10));
+
+        function  findMax(){
+
+            let max=0;
+
+            for(var i=0; i< arguments.length ; i++){
+
+                if(arguments[i] > max)
+                    max=arguments[i];
+            }
+
+            return max;
+
+        }
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+<div class="row">
+
+
+</div>
+
+
+
+</body>
+
+</html>

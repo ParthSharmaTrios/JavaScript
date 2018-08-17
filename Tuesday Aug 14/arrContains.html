@@ -2,7 +2,27 @@
 
 
 <head>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
 	<script>
+	
+	
+		console.log(axios.get('https://jsonplaceholder.typicode.com/posts'));
+		
+		let  data = [];
+		
+		axios.get('https://jsonplaceholder.typicode.com/posts')
+			  .then(function (response) {
+				// handle success
+				console.log(response);
+				
+				data=response.data;
+				
+				data.forEach(function(element) {
+					document.write(element.title);
+					});
+
+			  })
 	
 		var students=["a","b","c","d","e"];
 		
@@ -18,7 +38,7 @@
 		
 		}
 		
-		alert(result);
+		
 		
 		
 		
