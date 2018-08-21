@@ -1,6 +1,10 @@
 <html>
 <head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script>
 
 var users=[];
@@ -9,11 +13,18 @@ axios.get("https://jsonplaceholder.typicode.com/users")
 .then(function(response){
 	
 	users = response.data;
+	let showData="";
 	
 	for(var i=0; i < users.length ; i++){
-		document.write(users[i].name+" "+ users[i].email + "<br>");
+		//document.write(users[i].name+" "+ users[i].email + "<br>");
+	
+		showData = showData + "<tr><td>"+users[i].name+"</td> <td>"+users[i].username +"</td><td>"+users[i].email +"</td> </tr>"
+		
+	
 	
 	}
+	
+	document.getElementById("data").innerHTML= showData;
 	
 
 });
@@ -23,6 +34,23 @@ axios.get("https://jsonplaceholder.typicode.com/users")
 
 <body>
 
+   <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    
+	<tbody id="data">
+      
+	
+	  
+    </tbody>
+  </table>
 
 </body>
+
+
 </html>
