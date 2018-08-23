@@ -1,0 +1,73 @@
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+	var tasks=[];
+	
+	function add(){
+	
+		var newTask = document.getElementById("newTask").value;
+		
+		tasks.push(newTask);
+		
+		
+		let showData="";
+		
+		for(var i=0; i < tasks.length ; i++){
+		
+			showData = showData+ `<li onclick="remove(${i})"> ${tasks[i]} </li>`;
+		
+		
+		}
+		
+		document.getElementById("showTasks").innerHTML= showData;
+	
+	}
+	
+	function remove(index){
+	
+		tasks.splice(index,1);
+		
+		let showData="";
+		
+		for(var i=0; i < tasks.length ; i++){
+		
+			showData = showData+ `<li onclick="remove(${i})"> ${tasks[i]} </li>`;
+			
+		
+		
+		}
+		
+		document.getElementById("showTasks").innerHTML= showData;
+		
+		
+	}
+	
+	
+
+</script>
+</head>
+
+
+<body>
+
+  <div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<input  type="text" id="newTask"> <Button class="btn btn-primary" onClick="add()">Add</button>
+		<ul id="showTasks">
+		
+		
+		</ul>
+	
+	</div>
+  
+  </div>
+
+</body>
+
+
+</html>

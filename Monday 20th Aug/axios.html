@@ -18,7 +18,19 @@ axios.get("https://jsonplaceholder.typicode.com/users")
 	for(var i=0; i < users.length ; i++){
 		//document.write(users[i].name+" "+ users[i].email + "<br>");
 	
-		showData = showData + "<tr><td>"+users[i].name+"</td> <td>"+users[i].username +"</td><td>"+users[i].email +"</td> </tr>"
+		//showData = showData + "<tr><td>"+users[i].name+"</td> <td>"+users[i].username +"</td><td>"+users[i].email +"</td> </tr>"
+		
+		
+		showData= showData + `<tr>
+								<td>${users[i].name }</td>
+								<td>${users[i].username }</td>
+								<td>${users[i].email }</td>
+							 </tr>`
+								
+								
+								
+		
+		
 		
 	
 	
